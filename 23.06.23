@@ -1,0 +1,12 @@
+use student_details2;
+create table courses(course_no int primary key,course_name varchar(20));
+insert into courses values(101,"MCA");
+insert into courses values(102,"BCA");
+insert into courses values(103,"Bsc");
+insert into courses values(104,"MCA");
+create table faculties(f_no int primary key,f_name varchar(20),course_no int,foreign key(course_no) references courses(course_no));
+insert into faculties values(1,"teena",101);
+insert into faculties values(2,"Meena",102);
+insert into faculties values(3,"beena",103);
+insert into faculties values(4,"veena",104);
+select * from faculties;
